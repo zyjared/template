@@ -1,0 +1,32 @@
+{
+  "name": "template",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "unbuild",
+    "test": "pnpm lint && vitest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.21.1",
+    "eslint": "^9.5.0",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.6.0"
+  }
+}
